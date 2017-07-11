@@ -2388,6 +2388,10 @@ Phaser.Loader.prototype = {
         file.data.name = file.key;
         file.data.controls = false;
         file.data.autoplay = false;
+        if (this.crossOrigin)
+        {
+            file.data.crossOrigin = this.crossOrigin;
+        }
 
         var videoLoadEvent = function () {
 
